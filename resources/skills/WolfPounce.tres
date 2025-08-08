@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://cxkwm17ovrmcj"]
+
+[ext_resource type="Script" uid="uid://pgho6tc2q25h" path="res://scripts/data/Skill.gd" id="1_efabw"]
+
+[resource]
+script = ExtResource("1_efabw")
+id = "WolfPounce"
+display_name = "Wolf Pounce"
+kind = 0
+energy_cost = 12.0
+cooldown = 6.0
+power = 20.0
+melee_range = 1.8
+melee_radius = 1.0
+melee_duration = 0.15
+projectile_speed = 12.0
+projectile_lifetime = 2.5
+metadata/_custom_type_script = "uid://pgho6tc2q25h"

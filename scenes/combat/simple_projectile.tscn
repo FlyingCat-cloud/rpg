@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cafv681gvteau"]
+
+[ext_resource type="Script" uid="uid://f4svny36imd" path="res://scenes/combat/SimpleProjectile.gd" id="1_nmu18"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0rfg7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_jy6y6"]
+
+[node name="SimpleProjectile" type="RigidBody3D"]
+collision_layer = 8
+collision_mask = 4
+gravity_scale = 0.0
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_nmu18")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("SphereShape3D_0rfg7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("SphereMesh_jy6y6")

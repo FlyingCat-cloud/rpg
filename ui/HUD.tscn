@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://g8onsfsqil3n"]
+
+[ext_resource type="Script" uid="uid://cwutdarp0cdr1" path="res://ui/HUD.gd" id="1_1x8ju"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_1x8ju")
+
+[node name="EnergyPanel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 316.0
+offset_bottom = 72.0
+
+[node name="EnergyLabel" type="Label" parent="EnergyPanel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 95.0
+offset_bottom = 11.0
+text = "Fusion Energy"
+
+[node name="CardLabel" type="Label" parent="EnergyPanel"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = -12.0
+offset_right = 207.0
+offset_bottom = 11.0
+text = "Card: (none)"
+
+[node name="EnergyBar" type="ProgressBar" parent="EnergyPanel"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 13.0
+offset_right = 142.0
+offset_bottom = 40.0
+value = 100.0

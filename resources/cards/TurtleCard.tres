@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FusionCard" load_steps=4 format=3 uid="uid://dci4csh3mh0rl"]
+
+[ext_resource type="Script" uid="uid://b2p2ip6mxv2w1" path="res://scripts/data/StatBlock.gd" id="1_mvjbd"]
+[ext_resource type="Script" uid="uid://bby4i4mv6tg2g" path="res://scripts/data/FusionCard.gd" id="2_bwnbv"]
+
+[sub_resource type="Resource" id="Resource_a2xkw"]
+script = ExtResource("1_mvjbd")
+hp = 180
+atk = 10
+def = 20
+spd = 0.0
+metadata/_custom_type_script = "uid://b2p2ip6mxv2w1"
+
+[resource]
+script = ExtResource("2_bwnbv")
+id = "turtle_card"
+display_name = "Turtle"
+type = 0
+rarity = 1
+base_stats = SubResource("Resource_a2xkw")
+energy_drain_per_sec = 6.0
+speed_bonus = 3.0
+metadata/_custom_type_script = "uid://bby4i4mv6tg2g"

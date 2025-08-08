@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=3 format=3 uid="uid://cpbo3rkx7hkim"]
+
+[ext_resource type="Script" uid="uid://pgho6tc2q25h" path="res://scripts/data/Skill.gd" id="1_8dpe3"]
+[ext_resource type="PackedScene" uid="uid://cafv681gvteau" path="res://scenes/combat/simple_projectile.tscn" id="1_ucdaq"]
+
+[resource]
+script = ExtResource("1_8dpe3")
+id = "Eagle_shot"
+display_name = "Eagle Shot"
+kind = 1
+energy_cost = 10.0
+cooldown = 4.0
+power = 15.0
+melee_range = 1.8
+melee_radius = 1.0
+melee_duration = 0.15
+projectile_scene = ExtResource("1_ucdaq")
+projectile_speed = 14.0
+projectile_lifetime = 2.5
+metadata/_custom_type_script = "uid://pgho6tc2q25h"

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://clnxen4c60jmt"]
+
+[ext_resource type="Script" uid="uid://cttqtkw2nlk3s" path="res://scenes/fx/FloatingText.gd" id="1_el41x"]
+
+[node name="FloatingText" type="Label3D"]
+fixed_size = true
+font_size = 36
+script = ExtResource("1_el41x")

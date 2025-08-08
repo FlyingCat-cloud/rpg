@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FusionCard" load_steps=4 format=3 uid="uid://w1jeb3aa0ixl"]
+
+[ext_resource type="Script" uid="uid://b2p2ip6mxv2w1" path="res://scripts/data/StatBlock.gd" id="1_ig5h6"]
+[ext_resource type="Script" uid="uid://bby4i4mv6tg2g" path="res://scripts/data/FusionCard.gd" id="2_dn55m"]
+
+[sub_resource type="Resource" id="Resource_a2xkw"]
+script = ExtResource("1_ig5h6")
+hp = 100
+atk = 14
+def = 6
+spd = 1.0
+metadata/_custom_type_script = "uid://b2p2ip6mxv2w1"
+
+[resource]
+script = ExtResource("2_dn55m")
+id = "chicken_card"
+display_name = "Chicken"
+type = 0
+rarity = 1
+base_stats = SubResource("Resource_a2xkw")
+energy_drain_per_sec = 6.0
+speed_bonus = 1.0
+metadata/_custom_type_script = "uid://bby4i4mv6tg2g"

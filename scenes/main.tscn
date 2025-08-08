@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://cspdutyjk4e55"]
+
+[ext_resource type="PackedScene" uid="uid://n7yj437lb046" path="res://scenes/player/Player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://g8onsfsqil3n" path="res://ui/HUD.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://di0abrp7mxt0e" path="res://scripts/gameplay/EnergyPickup.gd" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://0dhvoviyvqlb" path="res://scenes/enemies/Slime.tscn" id="4_jyhfs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jyhfs"]
+radius = 0.626686
+
+[sub_resource type="SphereMesh" id="SphereMesh_sugp2"]
+
+[node name="Main" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_0wfyh")
+
+[node name="PlayerRoot" parent="." instance=ExtResource("1_o5qli")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+
+[node name="HUD" parent="." instance=ExtResource("2_0wfyh")]
+fusion_path = NodePath("../PlayerRoot/Player/FusionController")
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("3_sugp2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31996, 0.417765, -0.81592)
+shape = SubResource("SphereShape3D_jyhfs")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
+mesh = SubResource("SphereMesh_sugp2")
+
+[node name="Slime" parent="." instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.34977, 0.451485, -3.88614)
+
+[node name="Slime2" parent="." instance=ExtResource("4_jyhfs")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.09966, 0.386296, 4.00894)
+
+[editable path="PlayerRoot"]
